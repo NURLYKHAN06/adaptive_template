@@ -1,0 +1,110 @@
+.services-wrap{
+    padding: 50px 0;
+    color: #464646;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .links-tab{
+        text-align: center;
+
+        br{
+            display: none;
+        }
+
+        a{
+            font-size: 1.4em;
+            border-bottom: 1px dashed #b1cb02;
+            margin: 0 9px;
+            transition: 0.3s border ease;
+
+            &.active{
+                border-bottom: 3px solid #b1cb02;
+            }
+        }
+
+        & + p { 
+            text-align: center; 
+            margin-top: 2em;
+            padding: 0 5px;
+        }
+    }
+}
+
+// Slider 
+.services-slider-wrap{
+    margin-top: 2em;
+
+    .slider-wrap{
+        height: 480px;
+        overflow: hidden;
+        position: relative;
+        display: none;
+
+        &.active{
+            display: flex;
+        }
+    }
+
+    .slide{
+        width: 100%;
+        max-width: 320px;
+        height: 480px;
+        background: #ececec;
+        margin: 1.5em;
+        flex-shrink: 0;
+        transition: 0.3s all;
+        padding: 50px 30px;
+
+        li{
+            padding: 7px 10px;
+
+            a{
+                border-bottom: 1px solid #164e9d;
+
+                &:hover{
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+
+
+
+        h5{
+            font-size: 1.5em;
+            font-family: 'Open Sans';
+            font-weight: normal;
+            line-height: 25px;
+            margin: 1.5em 0;
+            color:#164e9d;
+            padding-left: 7px;
+        }
+
+        &:hover{
+            background: #1c3860 url('../images/bg-block.jpg');
+            color:#fff;
+
+            h5{
+                color:#fff;
+            }
+        }
+    }
+}
+
+.slide-prev,
+.slide-next{
+    width: 35px;
+    height: 40px;
+    background: blue;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.slide-prev{
+    background: #b1cb02 url('../images/arrow-left.svg') center no-repeat / contain;
+}
+.slide-next{
+    right: 0;
+    background: #b1cb02 url('../images/arrow-right.svg') center no-repeat / contain;
+}

@@ -1,0 +1,103 @@
+@media(max-width:1048px){
+    // HEADER
+    header{
+        padding: 20px 2em;
+    }
+}
+
+@media(max-width:768px){
+    // HEADER
+    header{
+
+        .left{
+            max-width: 240px;
+        }
+        .after-logo{
+            display: none;
+        }
+    }
+}
+
+@media(max-width:640px){
+    // HEADER
+    header{
+        .right{
+            padding-left: 10px;
+            max-width: 80px;
+
+
+            .link{
+                width: 35px;
+                height: 35px;
+    
+                &:first-child::after,
+                &:last-child::after{
+                    content: none;
+                }
+                &:first-child{
+                    background: url('../images/call-icon.png') no-repeat center;
+                }
+                &:last-child{
+                    background: url('../images/market-icon.png') no-repeat center;
+                }
+    
+                a,p{
+                    display: none
+                }
+            }
+    
+           
+        }
+    }
+    // Services
+    div.services-wrap .slick-arrow,
+    div.news-wrap .slick-arrow{
+        display: none !important;
+    }
+
+    .services-slider-wrap .slider-wrap .slide{
+        padding: 50px 15px;
+        max-width: 270px;
+    }
+    // Clients 
+    div.clients-wrap .clients{
+        
+        &.clients-sm{
+            display: flex;
+        }
+        &.clients-lg{
+            display: none;
+        }
+    }
+    // Footer
+    .footer-wrap{
+        .navs{
+            flex-direction: column;
+            max-width: 150px;
+
+            nav:nth-child(2){
+                margin: 15px 0;
+            }
+        }
+    }
+
+}
+@media(max-width:480px){
+    // HEADER
+    header{
+        padding: 20px 1em;
+
+        .left{
+            max-width: 200px;
+        }
+    }
+    // Services
+    .services-wrap{
+
+        .links-tab{
+            br{
+                display: block !important;
+            }
+        }
+    }
+}

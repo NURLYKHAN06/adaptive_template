@@ -1,0 +1,149 @@
+header{
+    max-width: 996px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    .main-nav{
+        position: fixed;
+        top: 100px;
+        right: 0;
+        max-height: 0;
+        left: 0;
+        bottom: 0;
+        background: #1c3860 url('../images/bg-block.jpg');
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.3s all ease;
+        color: transparent;
+
+        &.active{
+        	z-index: 99;
+            visibility: visible;
+            opacity: 1;
+            max-height: 100%;
+        }
+
+        ul{
+            li{
+                padding: 10px 15px;
+                font-size: 1.5em;
+                color: white;
+                border-bottom: 2px solid transparent;
+                transition: 0.3s all ease;
+                cursor: pointer;
+
+                &:hover{
+                    border-bottom: 2px solid #fff
+                }
+            }
+        }
+    }
+
+
+
+    .left{
+        display: flex;
+        align-items: center;
+        background: #fff;
+        width: 100%;
+        max-width: 450px;
+        justify-content: space-between;
+    }
+    .right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        padding-left: 50px;
+
+        .link{
+            position: relative;
+
+            &:first-child::after,
+            &:last-child::after
+            {
+                content: '';
+                display: block;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                top: 2px;
+                right: 100%;
+                margin-right: 5px;;
+            }
+            &:first-child::after{
+                background: url('../images/call-icon.png') no-repeat center;
+            }
+            &:last-child::after{
+                background: url('../images/market-icon.png') no-repeat center;
+            }
+
+
+            a{
+                font-size: 20px;
+                border-bottom: 1px solid #b1cb02;
+                color: #464646
+            }
+            p{
+                font-size: 14px;
+                color: #464646;
+            }
+        }
+        
+    }
+
+    .btn-menu-toggle{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 25px;
+        cursor: pointer;
+
+        &.active{
+            
+            span:nth-child(2){
+                opacity: 0;
+            }
+            span:first-child{
+                transform: translate(1px,7px) rotate(45deg);
+            }
+            span:last-child{
+                transform: translate(0px,-9px) rotate(-45deg);
+            }
+        }
+
+        span{
+            display: block;
+            background: #464646;
+            height: 4px;
+            width: 30px;
+            transition: 0.3s all ease;
+        }
+    }
+
+    .main-logo{
+        width: 60px;
+        height: 60px;
+        background: url('../images/main-logo.jpg') center no-repeat / contain;
+    }
+
+    img.after-logo{
+        width: 160px;
+        height: 30px;
+    }
+
+    .languages{
+        a{
+            color: #084295;
+            font-weight: normal;
+        }
+    }
+}
